@@ -29,7 +29,7 @@ import 'bootstrap/dist/css/bootstrap.css';
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="#">Registration</a>
+        <a class="nav-link" href="#">Registration here</a>
       </li>
     </ul>
     
