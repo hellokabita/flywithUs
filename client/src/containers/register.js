@@ -91,7 +91,7 @@ const Register = ()=>{
                             </Form>
                         )} 
                     </Formik>
-                    <p style={{ marginTop: '10px' }}>Already have an account? Please <Link to="/">Login</Link> to continue</p>
+                    <p style={{ marginTop: '10px' }}>Already have an account? Please <Link to="/login">Login</Link> to continue</p>
                 </div>
             </div>
         </section>

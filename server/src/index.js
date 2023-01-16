@@ -1,19 +1,13 @@
 const express= require('express');
-const dotenv = require('dotenv')
-require('dotenv').config()
-dotenv.config({path: './config.env'})
 const PORT = 5000;
 const bodyParser = require('body-parser')
 const cors = require('cors')
 
 require('./models/users')
-
-const mongoose = require ('mongoose')
 const app =express();
 
 require('./db/connect');
 app.use(express.json())
-
 app.use(bodyParser.json())
 app.use(cors())
 
@@ -22,7 +16,11 @@ app.get('/signup', (req,res)=>{
 })
 
 const registerRouter = require('./routes/registerRoute');
+const loginRouter = require('./routes/loginRouter');
+
+
 app.use(registerRouter)
+app.use(loginRouter)
 
 
 app.listen(PORT, ()=>{
