@@ -1,20 +1,17 @@
 import React from 'react'
 import video from '../background/video2.mp4'
-import './home.css'
+import './home.scss'
 
   const Home=()=> {
   return (
    <>
     <section className='home'>
       <div className='overlay'>
-        <video src={video} muted autoPlay looptype="video/mp4"></video>
+        <video src={video} muted autoPlay loop type="video/mp4"></video>
 
         <div classNmae="homeContent container">
           <div className="textDiv">
-            <span className="smallText">
-              Our Packages
-            </span>
-            <h1 className="homeTitle">Search your Holiday</h1>
+            
           </div>
         </div>
       </div>
