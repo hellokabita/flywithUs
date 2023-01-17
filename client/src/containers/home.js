@@ -1,5 +1,5 @@
 import React from 'react'
-import video from '../background/video2.mp4'
+import video from '../background/video1.mp4'
 import './home.scss'
 
   const Home=()=> {
