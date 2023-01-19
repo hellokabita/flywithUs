@@ -2,7 +2,7 @@ import React from "react";
 import { Formik, Field, Form } from 'formik';
 import * as Yup from 'yup';
 import { message } from 'antd';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate, Link, Navigate } from 'react-router-dom';
 import ShowhidePassword from "../../components/showhidePassword";
 import { useDispatch } from "react-redux"
 import {setUserDetails}  from "../../reducers/userSlice"
@@ -12,6 +12,7 @@ import './login.css'
 
 const Login = ()=>{
     const dispatch = useDispatch()
+    const navigate = useNavigate()
  
     const loginUser = async(values, resetForm)=>{
         const requestOptions = {
@@ -26,6 +27,7 @@ const Login = ()=>{
         if(data.msg === 'login success'){
             dispatch(setUserDetails(data.userDetails))
             message.success(data.msg)
+            
         }else{
             message.error(data.msg)
         }

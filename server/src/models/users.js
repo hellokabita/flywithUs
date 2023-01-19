@@ -8,6 +8,7 @@ const usersSchema = new Schema({
     phoneNumber: {type:Number, required: true},
     password:  {type:String, required: true},
     Address:  {type:String, required: true},
+    userRole:{type:String}
     
   },
   { collection: 'users' });

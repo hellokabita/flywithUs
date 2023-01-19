@@ -1,5 +1,5 @@
 import React from 'react'
-import video from '../../background/video1.mp4'
+import video from '../../background/video2.mp4'
 import './packages.css'
 import {GrLocation} from 'react-icons/gr'
 import {HiFilter} from 'react-icons/hi'
@@ -9,7 +9,7 @@ import {HiFilter} from 'react-icons/hi'
    
     <section className='home'>
       <div className='overlay'></div>
-        {/* <video src={video} muted autoPlay loop type="video/mp4"></video> */}
+        <video src={video} muted autoPlay loop type="video/mp4"></video>
 
         <div className="homeContent container">
           <div className="textDiv">
