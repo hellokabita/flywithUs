@@ -13,7 +13,7 @@ import { NavLink } from 'react-router-dom';
     <span className="navbar-toggler-icon"></span>
   </button>
 
-  <div className="collapse navbar-collapse" id="navbarSupportedContent">
+  <div className="NavbarItems" id="navbarSupportedContent">
     <ul className="navbar-nav mr-auto">
       <li className="nav-item active">
         <NavLink className="nav-link" to="/">Home <span className="sr-only">(current)</span></NavLink>

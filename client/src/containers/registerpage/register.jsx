@@ -2,7 +2,7 @@ import React from 'react'
 import { Formik, Field, Form } from 'formik';
 import * as Yup from 'yup';
 import { message } from 'antd';
-import ShowhidePassword from '../components/showhidePassword';
+import ShowhidePassword from '../../components/showhidePassword';
 import { useNavigate, Link } from 'react-router-dom';
 
 
@@ -22,7 +22,7 @@ const Register = ()=>{
     
             if(data.msg === "users registered"){
                 message.success(data.msg)
-                navigate('/')
+                navigate('/login')
             }else{
                 message.error(data.errmsg)
             }
@@ -47,10 +47,14 @@ const Register = ()=>{
 	});
 
     return(
-        <section className='form_section'>
-            <div className='container'>
-                <div className='form'>
-                    <h1>Sign Up</h1>
+        <section className='home'>
+            <div className='overlay'></div>
+            <div className='homeContent container'>
+                <div className='textDiv'>
+                <h1 className='homeTitle'>
+              REGISTER
+            </h1>
+          </div>
 
                     <Formik
                         initialValues={{
@@ -59,8 +63,9 @@ const Register = ()=>{
                             phoneNumber: '',
                             Address: '',
                             password: '',
-                            
-                        }}
+                            userRole:''
+
+                             }}
                         validationSchema={SignupSchema}
                         onSubmit={values=>{
                             registerUser(values)
@@ -80,6 +85,8 @@ const Register = ()=>{
 
                                 <Field name="Address" placeholder="Your Address" value={values.Address} onChange={handleChange} onBlur={handleBlur} />
                                 {errors.Address && touched.Address ? (<div className="error">{errors.Address}</div>) : null}
+                                
+                                {errors.userRole && touched.userRole ? (<div className="error">{errors.userRole}</div>) : null}
 
                                 
                                 
@@ -92,7 +99,7 @@ const Register = ()=>{
                         )} 
                     </Formik>
                     <p style={{ marginTop: '10px' }}>Already have an account? Please <Link to="/login">Login</Link> to continue</p>
-                </div>
+                
             </div>
         </section>
     )
