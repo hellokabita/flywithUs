@@ -1,5 +1,5 @@
 import React from 'react'
-import video from '../background/video2.mp4'
+// import video from '../background/video2.mp4'
 import './home.css'
 
   const Home=()=> {
@@ -7,7 +7,7 @@ import './home.css'
    <>
     <section className='home'>
       <div className='overlay'>
-        <video src={video} muted autoPlay looptype="video/mp4"></video>
+        {/* <video src={video} muted autoPlay looptype="video/mp4"></video> */}
 
         <div classNmae="homeContent container">
           <div className="textDiv">
