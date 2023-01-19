@@ -93,6 +93,28 @@ const Register = ()=>{
                                 <Field name="password" placeholder="Your password" value={values.password} onChange={handleChange} onBlur={handleBlur} component={ShowhidePassword}/>
                                 {errors.password && touched.password ? (<div className="error">{errors.password}</div>) : null}
 
+                                <select
+									name="userRole"
+									value={values.userRole}
+									onChange={handleChange}
+									onBlur={handleBlur}
+								>
+									<option
+										value=""
+										disabled="disabled"
+										label="Select a Role"
+									></option>
+									<option value="user" label="User">
+										User
+									</option>
+									<option value="admin" label="Admin">
+										Admin
+									</option>
+                                </select>
+								{errors.userRole && touched.userRole ? (
+									<div className="error">{errors.userRole}</div>
+								) : null}
+
                                 
                                 <button type="submit">Signup</button>
                             </Form>

@@ -21,6 +21,7 @@ app.post('/register', async(req, res) => {
 				const data = await Users.create(req.body)
 				if (data) {
 					res.json({ msg: 'users registered' })
+					
 				} else {
 					res.json({ msg: 'sth went wrong' })
 				}
