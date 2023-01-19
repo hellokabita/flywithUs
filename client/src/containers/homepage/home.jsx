@@ -19,7 +19,7 @@ import {HiFilter} from 'react-icons/hi'
             </span>
 
             <h1 className='homeTitle'>
-              Search Your Destination
+              Search Your Destination Here
             </h1>
           </div>
 

@@ -40,7 +40,7 @@ const Login = ()=>{
             {/* <video src={video} muted autoPlay loop type="video/mp4"></video> */}
                 <div className='homeContent container'>
                     <div className="textDiv">
-                    <h1 className='homeTitle'>LOGIN
+                    <h1 className='homeTitle'>LOGIN HERE
             </h1>
                     </div>
                    
