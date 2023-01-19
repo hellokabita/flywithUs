@@ -60,7 +60,17 @@ const Navigation = () => {
                                     <Button onClick={showDrawer} className="menu-icon"><HiOutlineMenuAlt3/></Button>
                                     <Drawer placement="right" onClose={onClose} open={open}>
                                         <ul>
-                                            <li><Link to="/">welcome to user Dashboard</Link></li>
+                                            <h1>DASHBOARD</h1>
+                                            <br></br>
+                                            <li><Link to="/">Dashboard</Link></li>
+                                            <li><Link to="/">Dashboard</Link></li>
+                                            <li><Link to="/">Dashboard</Link></li>
+                                            <li><Link to="/">Dashboard</Link></li>
+                                            <li><Link to="/">Dashboard</Link></li>
+                                            <li><Link to="/">Dashboard</Link></li>
+                                            <li><Link to="/">Dashboard</Link></li>
+                                            <li><Link to="/">Dashboard</Link></li>
+
                                             {/* <li><Link to="/ordersdata">Orders</Link></li> */}
                                         </ul>
                                     </Drawer>

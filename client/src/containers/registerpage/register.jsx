@@ -63,7 +63,7 @@ const Register = ()=>{
                             phoneNumber: '',
                             Address: '',
                             password: '',
-                            userRole:''
+                            userRole:'user'
 
                              }}
                         validationSchema={SignupSchema}
@@ -93,7 +93,7 @@ const Register = ()=>{
                                 <Field name="password" placeholder="Your password" value={values.password} onChange={handleChange} onBlur={handleBlur} component={ShowhidePassword}/>
                                 {errors.password && touched.password ? (<div className="error">{errors.password}</div>) : null}
 
-                                <select
+                                {/* <select
 									name="userRole"
 									value={values.userRole}
 									onChange={handleChange}
@@ -113,7 +113,7 @@ const Register = ()=>{
                                 </select>
 								{errors.userRole && touched.userRole ? (
 									<div className="error">{errors.userRole}</div>
-								) : null}
+								) : null} */}
 
                                 
                                 <button type="submit">Signup</button>
