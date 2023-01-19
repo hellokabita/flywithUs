@@ -3,9 +3,13 @@ import { Formik, Field, Form } from 'formik';
 import * as Yup from 'yup';
 import { message } from 'antd';
 import { useNavigate, Link } from 'react-router-dom';
-import ShowhidePassword from "../components/showhidePassword";
+import ShowhidePassword from "../../components/showhidePassword";
 import { useDispatch } from "react-redux"
-import {setUserDetails}  from "../reducers/userSlice"
+import {setUserDetails}  from "../../reducers/userSlice"
+import video from '../../background/video1.mp4'
+import './login.css'
+
+
 const Login = ()=>{
     const dispatch = useDispatch()
  
@@ -31,11 +35,15 @@ const Login = ()=>{
 		email: Yup.string().email('Invalid email').required('Required'),
 	});
     return(
-        <section>
-            <div className='container'>
-                <div className='form'>
-                    <h1>Login</h1>
-                     
+        <section className="home">
+            <div className='overlay'></div>
+            {/* <video src={video} muted autoPlay loop type="video/mp4"></video> */}
+                <div className='homeContent container'>
+                    <div className="textDiv">
+                    <h1 className='homeTitle'>LOGIN HERE
+            </h1>
+                    </div>
+                   
                     <Formik
                         initialValues={{
                             email: '',
@@ -50,19 +58,39 @@ const Login = ()=>{
 
                         {({ errors, touched, values, handleChange, handleBlur, handleSubmit }) => (
                             <Form onSubmit={handleSubmit}>
-                                <Field name="email" placeholder="Enter Email" value={values.email} onChange={handleChange} onBlur={handleBlur} />
+
+                            <div className="CarDiv grid">
+                            <div className='destinationInput'>
+                            <label htmlFor='name'>Your email</label>
+                            <div className='input flex'>
+                            <Field name="email" placeholder="Enter Email" value={values.email} onChange={handleChange} onBlur={handleBlur} />
                                 {errors.email && touched.email ? (<div className="error">{errors.email}</div>) : null}
 
-                                <Field name="password" placeholder="Enter Password" value={values.password} component={ShowhidePassword} onChange={handleChange} onBlur={handleBlur} />
+                            </div>
+                            </div>
+                            <div className='destinationInput'>
+                            <label htmlFor='name'>Your password</label>
+                            <div className='input flex'>
+                            <Field name="password" placeholder="Enter Password" value={values.password} component={ShowhidePassword} onChange={handleChange} onBlur={handleBlur} />
                                 {errors.password && touched.password ? <div className="error">{errors.password}</div> : null}
 
-                                <button type="submit">Login</button>
-                            </Form>
+                            </div>
+                            </div>
+                            {/* <div className="button"> */}
+
+
+                            {/* </div> */}
+                            
+                            </div>
+                            <button className="button" type="submit">Login</button>
+
+                                
+                         </Form>
                         )}
                     </Formik>
                     <p style={{ marginTop: '10px' }}>Dont have an account? <Link to="/register">Signup</Link> here</p>
                 </div>
-            </div>
+            
         </section>
     )
 }
