@@ -9,6 +9,7 @@ import AdminDashboard from '../containers/admin/dashboard';
 import UserDashboard  from '../containers/user/dashboard'
 import Packages from '../containers/packages/packages';
 import {useSelector} from 'react-redux';
+import ChangePassword from "./changePassword";
 
 
 
@@ -30,6 +31,8 @@ const UserScreen=()=>{
       <Route exact path='/contact' element={<Contact/>}/>
       <Route exact path='/about' element={<About/>}/>
       <Route exact path='/packages' element={<Packages/>}/>
+      <Route exact path = '/changepassword' element = {<ChangePassword/>}/>
+
 
       </Routes>
     )
@@ -39,7 +42,7 @@ const UserScreen=()=>{
     return(
       <Routes>
         <Route exact path='/' element={<AdminDashboard/>}/>
-        {/* <Route exact path = '/changepassword' element = {<ChangePassword/>}/> */}
+        <Route exact path = '/changepassword' element = {<ChangePassword/>}/>
       </Routes>
     )
   }
