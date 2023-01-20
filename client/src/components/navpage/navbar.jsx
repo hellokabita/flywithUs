@@ -89,120 +89,15 @@ import { useSelector} from 'react-redux';
   
 
 
-// if (userRole === 'user'){
-//   return(
-//     <>
-//     <Navigation/>
-// <nav className="navbar navbar-expand-lg navbar-light bg-light">
-//   <div className='logoDiv'>
-//            <NavLink to='#' className='logo flex'>
-//            <h1><ImAirplane className='icon'/>flywithUs</h1>
-//              </NavLink>
-//           </div>
-//     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-//       <span className="navbar-toggler-icon"></span>
-//     </button>
-    
-//   <div className="NavbarItems" id="navbarSupportedContent">
-//   <ul className="navbar-nav mr-auto">
-
-    
-//        <li className="nav-item active">
-//          <NavLink className="nav-link" to="/">Home </NavLink>
-//        </li>
- 
-        
-       
-     
-//        <li className="nav-item active">
-//          <NavLink className="nav-link" to="/packages">Packages</NavLink>
-//        </li>
-//        <li className="nav-item">
-//          <NavLink className="nav-link" to="/about">About</NavLink>
-//        </li>
- 
-//        <li className="nav-item">
-//          <NavLink className="nav-link" to="/contact">Contact</NavLink>
-//        </li>
- 
-     
- 
-      
-//      </ul>
-     
-//    </div>
-//    </nav>
-//    </>
-  
-//   )}
-//   else if(userRole === 'admin'){
-//     return(
-//     <>
-//      <Navigation/>
-   
-// <nav className="navbar navbar-expand-lg navbar-light bg-light">
-// <div className='logoDiv'>
-//          <NavLink to='#' className='logo flex'>
-//          <h1><ImAirplane className='icon'/>flywithUs</h1>
-//            </NavLink>
-//         </div>
-//   <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-//     <span className="navbar-toggler-icon"></span>
-//   </button>
-
-//         <div className="NavbarItems" id="navbarSupportedContent">
-//         <ul className="navbar-nav mr-auto">
-//           <li className="nav-item active">
-//             <NavLink className="nav-link" to="/">Home </NavLink>
-//           </li>
-    
-           
-          
-        
-//           <li className="nav-item active">
-//             <NavLink className="nav-link" to="/packages">upload Packages</NavLink>
-//           </li>
-//           <li className="nav-item">
-//             <NavLink className="nav-link" to="/ticketList">tickets</NavLink>
-//           </li>
-    
-//           <li className="nav-item">
-//             <NavLink className="nav-link" to="/userList">users</NavLink>
-//           </li>
-    
-      
-    
-          
-//         </ul>
-        
-//       </div>
-//       </nav>
-//       </>
-//     )
-//   }else{
-//     return null
-//   }
-  
- 
-  
- 
-  
-        
-//   }
-
-// export default Navbar;
-
-
-
 
 
 
 
   return(
     <>
-    <Navigation/>
+   
     {userRole ?(
-     <nav className="navbar navbar-expand-lg navbar-light bg-light">
+     <nav className="navbar navbar-expand-lg navbar-light bg-light flex">
      <div className='logoDiv'>
            <NavLink to='#' className='logo flex'>
            <h1><ImAirplane className='icon'/>flywithUs</h1>
@@ -213,6 +108,7 @@ import { useSelector} from 'react-redux';
     </button>
     
   <div className="NavbarItems" id="navbarSupportedContent">
+  
    
    {userRole === 'user' ?(
     <ul className="navbar-nav mr-auto">
@@ -235,12 +131,14 @@ import { useSelector} from 'react-redux';
 <li className="nav-item">
   <NavLink className="nav-link" to="/contact">Contact</NavLink>
 </li>
+{/* <Navigation/> */}
 
 
 
 
 </ul>
    ):(
+    <>
     <ul className="navbar-nav mr-auto">
 
     
@@ -266,8 +164,10 @@ import { useSelector} from 'react-redux';
     
     
     </ul>
+   
+    </>
    )}
-    
+     <Navigation/>
   
      
    </div>

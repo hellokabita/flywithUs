@@ -17,10 +17,14 @@ app.get('/signup', (req,res)=>{
 
 const registerRouter = require('./routes/registerRoute');
 const loginRouter = require('./routes/loginRouter');
+const changePassword =require('./routes/changePswdRoute')
+
 
 
 app.use(registerRouter)
 app.use(loginRouter)
+app.use(changePassword)
+
 
 
 app.listen(PORT, ()=>{

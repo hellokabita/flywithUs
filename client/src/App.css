@@ -63,6 +63,7 @@ li{
   outline: none;
   cursor: pointer;
   color: aliceblue;
+  align-items: center;
 }
 
 .btn NavLink{
@@ -88,4 +89,25 @@ body{
 }
 
 
-
+.homeContent {
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  margin: auto;
+  
+  color: rgb(32, 6, 161);
+  z-index: 100;
+}
+.homeContent .homeTitle {
+  position: relative;
+  text-align: center;
+  font-size: 10 rem;
+  justify-content: center;
+  font-weight: bold;
+  color: rgb(239, 9, 40);
+}

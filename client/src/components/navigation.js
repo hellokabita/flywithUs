@@ -13,7 +13,7 @@ const Navigation = () => {
     const items = [
         {
             key: '1',
-            label: <Link to={`/portfolio/${name}`}>Portfolio</Link>,
+            label: <Link to={`/portfolio/${name}`}>Profile</Link>,
         },
 
         {
@@ -44,7 +44,7 @@ const Navigation = () => {
     return (
         <>
              {userRole ?
-                <div className="navbar">
+                <div className="navbar flex">
                     <div className="navbar_left">
                         {userRole === 'user' ? (
                             <ul>
