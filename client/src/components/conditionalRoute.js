@@ -1,8 +1,8 @@
 import React from "react";
 import {Route, Routes} from 'react-router-dom'
 import Home from '../containers/auth/homepage/home';
-import Contact from '../containers/contact';
-import About from '../containers/about';
+import Contact from '../containers/user/contact';
+import About from '../containers/user/about';
 import Register from '../containers/auth/registerpage/register';
 import Login from '../containers/auth/loginpage/login';
 import AdminDashboard from '../containers/admin/dashboard';
