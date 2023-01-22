@@ -1,15 +1,16 @@
 import React from "react";
 import {Route, Routes} from 'react-router-dom'
-import Home from '../containers/homepage/home';
+import Home from '../containers/auth/homepage/home';
 import Contact from '../containers/contact';
 import About from '../containers/about';
-import Register from '../containers/registerpage/register';
-import Login from '../containers/loginpage/login';
+import Register from '../containers/auth/registerpage/register';
+import Login from '../containers/auth/loginpage/login';
 import AdminDashboard from '../containers/admin/dashboard';
 import UserDashboard  from '../containers/user/dashboard'
-import Packages from '../containers/packages/packages';
+import Packages from '../containers/user/packages';
 import {useSelector} from 'react-redux';
 import ChangePassword from "./changePassword";
+import Services from '../containers/admin/services'
 
 
 
@@ -43,6 +44,8 @@ const UserScreen=()=>{
       <Routes>
         <Route exact path='/' element={<AdminDashboard/>}/>
         <Route exact path = '/changepassword' element = {<ChangePassword/>}/>
+        <Route exact path = '/api/services' element = {<Services/>}/>
+
       </Routes>
     )
   }

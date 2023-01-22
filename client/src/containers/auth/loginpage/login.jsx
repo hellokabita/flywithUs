@@ -3,10 +3,10 @@ import { Formik, Field, Form } from 'formik';
 import * as Yup from 'yup';
 import { message } from 'antd';
 import { useNavigate, Link, Navigate } from 'react-router-dom';
-import ShowhidePassword from "../../components/showhidePassword";
+import ShowhidePassword from "../../../components/showhidePassword";
 import { useDispatch } from "react-redux"
-import {setUserDetails}  from "../../reducers/userSlice"
-import video from '../../background/video1.mp4'
+import {setUserDetails}  from "../../../reducers/userSlice"
+// import video from '../../background/video1.mp4'
 import './login.css'
 
 

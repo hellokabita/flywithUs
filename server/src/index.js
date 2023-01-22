@@ -2,6 +2,7 @@ const express= require('express');
 const PORT = 5000;
 const bodyParser = require('body-parser')
 const cors = require('cors')
+const servicesController = require('./controller/servicesController')
 
 require('./models/users')
 const app =express();
@@ -18,12 +19,18 @@ app.get('/signup', (req,res)=>{
 const registerRouter = require('./routes/registerRoute');
 const loginRouter = require('./routes/loginRouter');
 const changePassword =require('./routes/changePswdRoute')
+// const servicesRouter = require('./routes/servicesRouter')
 
 
 
 app.use(registerRouter)
 app.use(loginRouter)
 app.use(changePassword)
+app.post('/api/services', servicesController.addServices)
+app.get('/api/services', servicesController.getServices)
+
+// app.use(servicesRouter)
+
 
 
 
