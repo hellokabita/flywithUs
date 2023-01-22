@@ -6,7 +6,7 @@ import { useNavigate, Link, Navigate } from 'react-router-dom';
 import ShowhidePassword from "../../../components/showhidePassword";
 import { useDispatch } from "react-redux"
 import {setUserDetails}  from "../../../reducers/userSlice"
-// import video from '../../background/video1.mp4'
+// import video from '../../../background/video2.mp4'
 import './login.css'
 
 
@@ -37,14 +37,8 @@ const Login = ()=>{
 		email: Yup.string().email('Invalid email').required('Required'),
 	});
     return(
-        <section className="home">
-            <div className='overlay'></div>
-            {/* <video src={video} muted autoPlay loop type="video/mp4"></video> */}
-                <div className='homeContent container'>
-                    <div className="textDiv">
-                    <h1 className='homeTitle'>LOGIN HERE
-            </h1>
-                    </div>
+        <section >
+       <div className='home-Content'>
                    
                     <Formik
                         initialValues={{
@@ -60,6 +54,14 @@ const Login = ()=>{
 
                         {({ errors, touched, values, handleChange, handleBlur, handleSubmit }) => (
                             <Form onSubmit={handleSubmit}>
+
+
+
+{/* <video src={video} muted autoPlay loop type="video/mp4"></video> */}
+   
+       
+        <h1 className='homeTitle'>LOGIN HERE</h1>
+        
 
                             <div className="CarDiv grid">
                             <div className='destinationInput'>
@@ -83,15 +85,15 @@ const Login = ()=>{
 
                             {/* </div> */}
                             
-                            </div>
+                            </div><br/>
                             <button className="button" type="submit">Login</button>
-
+                            
                                 
                          </Form>
                         )}
                     </Formik>
                     <p style={{ marginTop: '10px' }}>Dont have an account? <Link to="/register">Signup</Link> here</p>
-                </div>
+                    </div>
             
         </section>
     )

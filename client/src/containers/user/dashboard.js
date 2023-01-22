@@ -1,10 +1,6 @@
 import React from "react";
 import { useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom'
-
-
-
-
+import { useNavigate } from 'react-router-dom';
 
 const Dashboard = ()=>{
     const navigate = useNavigate()
@@ -14,7 +10,7 @@ const Dashboard = ()=>{
         <>
             <div style={{
              backgroundImage: "url(/user.jpg)",
-             height:'100vh',
+             height:'150vh',
              marginTop:'-70px',
              fontSize:'50px',
              backgroundSize: 'cover',
@@ -30,7 +26,7 @@ const Dashboard = ()=>{
 
             </div>
             </div>
-
+           
             
         </>
     )

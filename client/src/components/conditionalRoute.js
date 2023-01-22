@@ -10,7 +10,9 @@ import UserDashboard  from '../containers/user/dashboard'
 import Packages from '../containers/user/packages';
 import {useSelector} from 'react-redux';
 import ChangePassword from "./changePassword";
-import Services from '../containers/admin/services'
+import Services from '../containers/admin/services';
+import Footer from '../containers/user/footer'
+
 
 
 
@@ -27,15 +29,17 @@ const ConditionalRouting = ()=>{
 
 const UserScreen=()=>{
     return(
+    <>
+   
       <Routes>
       <Route exact path='/' element={<UserDashboard/>}/> 
       <Route exact path='/contact' element={<Contact/>}/>
       <Route exact path='/about' element={<About/>}/>
       <Route exact path='/packages' element={<Packages/>}/>
       <Route exact path = '/changepassword' element = {<ChangePassword/>}/>
-
-
-      </Routes>
+     </Routes>
+     <Footer/>
+     </>
     )
   }
 
