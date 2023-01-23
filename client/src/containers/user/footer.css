@@ -1,0 +1,14 @@
+.footer-card{
+    padding:40px;
+    background-color: rgb(80, 77, 77);
+    margin-top: 30px;
+    color: white !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.a-link{
+    color: white;
+    display: block;
+}

@@ -1,8 +1,8 @@
 import React from "react";
 import {Route, Routes} from 'react-router-dom'
 import Home from '../containers/auth/homepage/home';
-import Contact from '../containers/contact';
-import About from '../containers/about';
+import Contact from '../containers/user/contact';
+import About from '../containers/user/about';
 import Register from '../containers/auth/registerpage/register';
 import Login from '../containers/auth/loginpage/login';
 import AdminDashboard from '../containers/admin/dashboard';
@@ -10,7 +10,9 @@ import UserDashboard  from '../containers/user/dashboard'
 import Packages from '../containers/user/packages';
 import {useSelector} from 'react-redux';
 import ChangePassword from "./changePassword";
-import Services from '../containers/admin/services'
+import Services from '../containers/admin/services';
+import Footer from '../containers/user/footer'
+
 
 
 
@@ -27,15 +29,17 @@ const ConditionalRouting = ()=>{
 
 const UserScreen=()=>{
     return(
+    <>
+   
       <Routes>
       <Route exact path='/' element={<UserDashboard/>}/> 
       <Route exact path='/contact' element={<Contact/>}/>
       <Route exact path='/about' element={<About/>}/>
       <Route exact path='/packages' element={<Packages/>}/>
       <Route exact path = '/changepassword' element = {<ChangePassword/>}/>
-
-
-      </Routes>
+     </Routes>
+     <Footer/>
+     </>
     )
   }
 
