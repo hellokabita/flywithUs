@@ -1,6 +1,8 @@
 import React from "react";
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import Packages from './packages'
+import Carousel from "./carousel";
 
 const Dashboard = ()=>{
     const navigate = useNavigate()
@@ -8,7 +10,7 @@ const Dashboard = ()=>{
     const {name} = useSelector(state=> state.user)
     return(
         <>
-            <div style={{
+            {/* <div style={{
              backgroundImage: "url(/user.jpg)",
              height:'150vh',
              marginTop:'-70px',
@@ -25,6 +27,13 @@ const Dashboard = ()=>{
             <button className='button' on onClick={()=>navigate('/packages')}>BOOK NOW</button>
 
             </div>
+            </div> */}
+
+            {/* <div>
+                <Carousel/>
+            </div> */}
+            <div>
+                <Packages/>
             </div>
            
             

@@ -1,87 +1,31 @@
-.home {
-  width: 100%;
+.home-Content {
+  padding: 50px 70px;
+  box-shadow: 0px 5px 10px 0px black;
+  margin: 70px 70px;
   position: relative;
-  display: flex;
+  width: 50%;
   align-items: center;
-  justify-content: center;
-  margin: auto;
 }
-.home .overlay {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background: rgb(47, 106, 127);
-  top: 0;
-  bottom: 0;
-  z-index: 1;
-  mix-blend-mode: hard-light;
-}
-.home video {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  bottom: 0;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.home .homeContent {
-  width: 100%;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
-  padding: 8rem 1.5rem 3rem;
-  display: flex;
-  row-gap: 3rem;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: center;
-  margin: auto;
-  color: white;
-  z-index: 100;
-}
-.home .homeContent .textDiv {
-  padding: 2rem 0;
-}
-.home .homeContent .textDiv .smallText {
-  font-size: 13px;
-  text-transform: uppercase;
-}
-.home .homeContent .textDiv .homeTitle {
+.home-Content .homeTitle {
   position: relative;
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
-.home .homeContent .carDiv {
+.home-Content .carDiv {
   position: relative;
-  width: 500px;
+  box-shadow: 0px 5px 10px 0px black;
+  align-items: center;
+  width: 50px;
   padding: 2rem 1rem;
-  background: white;
   border-radius: 10px;
   gap: 1rem;
 }
-.home .homeContent .carDiv label {
-  display: block;
-  color: black;
-  padding-bottom: 10px;
-  font-size: 13px;
-  font-weight: -500;
-}
-.home .homeContent .carDiv .label_total {
-  justify-content: space-between;
-  align-items: center;
-}
-.home .homeContent .carDiv .label_total .total {
-  color: black;
-  font-size: 18px;
-  padding-bottom: 10px;
-}
-.home .homeContent .carDiv .input {
+.home-Content .carDiv .input {
   height: 40px;
   padding: 0 1rem;
   background: rgb(223, 221, 221);
   border-radius: 3rem;
 }
-.home .homeContent .carDiv .input input {
+.home-Content .carDiv .input input {
   background: none;
   border: none;
   outline: none;
@@ -89,26 +33,26 @@
   font-size: 13px;
   font-weight: 500;
 }
-.home .homeContent .carDiv .input input::-moz-placeholder {
+.home-Content .carDiv .input input::-moz-placeholder {
   font-size: 13px;
 }
-.home .homeContent .carDiv .input input:-ms-input-placeholder {
+.home-Content .carDiv .input input:-ms-input-placeholder {
   font-size: 13px;
 }
-.home .homeContent .carDiv .input input::placeholder {
+.home-Content .carDiv .input input::placeholder {
   font-size: 13px;
 }
-.home .homeContent .carDiv .input .icon {
+.home-Content .carDiv .input .icon {
   font-size: 18px;
   color: black;
   margin-left: 10px;
 }
-.home .homeContent .carDiv .input .input type[type=range] {
+.home-Content .carDiv .input .input type[type=range] {
   background: rgb(109, 109, 110);
 }
-.home .homeContent .carDiv .input .button {
+.home-Content .carDiv .input .btn {
   position: absolute;
-  background: rgb(13, 191, 219);
+  background: rgb(13, 219, 71);
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -119,9 +63,8 @@
   border-radius: 3rem;
   left: 50%;
   transform: translate(-50%);
-  justify-content: center;
   cursor: pointer;
 }
-.home .homeContent .carDiv .input .button:hover {
+.home-Content .carDiv .input .btn:hover {
   background: blue;
 }/*# sourceMappingURL=register.css.map */

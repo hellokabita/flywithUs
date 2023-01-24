@@ -150,7 +150,7 @@ import { useSelector} from 'react-redux';
     
     
     <li className="nav-item active">
-      <NavLink className="nav-link" to="/services">ADD SERVICES</NavLink>
+      <NavLink className="nav-link" to="/api/services">ADD SERVICES</NavLink>
     </li>
     <li className="nav-item">
       <NavLink className="nav-link" to="/">ticketsList</NavLink>

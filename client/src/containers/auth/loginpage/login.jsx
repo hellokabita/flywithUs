@@ -65,7 +65,7 @@ const Login = ()=>{
 
                             <div className="CarDiv grid">
                             <div className='destinationInput'>
-                            <label htmlFor='name'>Your email</label>
+                            <label htmlFor='email'>Your email</label>
                             <div className='input flex'>
                             <Field name="email" placeholder="Enter Email" value={values.email} onChange={handleChange} onBlur={handleBlur} />
                                 {errors.email && touched.email ? (<div className="error">{errors.email}</div>) : null}
@@ -73,7 +73,7 @@ const Login = ()=>{
                             </div>
                             </div>
                             <div className='destinationInput'>
-                            <label htmlFor='name'>Your password</label>
+                            <label htmlFor='password'>Your password</label>
                             <div className='input flex'>
                             <Field name="password" placeholder="Enter Password" value={values.password} component={ShowhidePassword} onChange={handleChange} onBlur={handleBlur} />
                                 {errors.password && touched.password ? <div className="error">{errors.password}</div> : null}
@@ -84,9 +84,10 @@ const Login = ()=>{
 
 
                             {/* </div> */}
+                            <button className="button" type="submit">Login</button>
                             
                             </div><br/>
-                            <button className="button" type="submit">Login</button>
+                            
                             
                                 
                          </Form>

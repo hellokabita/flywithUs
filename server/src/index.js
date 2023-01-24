@@ -28,6 +28,8 @@ app.use(loginRouter)
 app.use(changePassword)
 app.post('/api/services', servicesController.addServices)
 app.get('/api/services', servicesController.getServices)
+app.get('/api/slider', servicesController.getSlider)
+
 
 // app.use(servicesRouter)
 

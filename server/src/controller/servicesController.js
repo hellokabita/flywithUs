@@ -34,3 +34,14 @@ module.exports.addServices= async(req, res)=>{
 
 
 }
+
+module.exports.getSlider = (req, res)=>{
+
+    const url1 = 'https://picsum.photos/id/236/400/300'
+    const url2 = 'https://picsum.photos/id/237/400/300'
+    const url3 = 'https://picsum.photos/seed/picsum/400/300'
+    const url4 = 'https://picsum.photos/seed/picsum/400/300'
+
+    const arr = [url1, url2, url3, url4]
+    return res.send ({code:200, message: 'success', data:arr})
+}

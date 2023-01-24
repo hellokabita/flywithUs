@@ -20,9 +20,12 @@ function Packages(){
 
     return (
         <div className='flex'>
+          
             {
                 data.length > 0 ?
-                  data.map((serviceItem, serviceIndex)=> {
+                  data
+                  .sort((a,b)=> a.title > b.title ? 1 : -1)
+                  .map((serviceItem, serviceIndex)=> {
                   
                     return (
                       

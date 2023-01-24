@@ -47,14 +47,10 @@ const Register = ()=>{
 	});
 
     return(
-        <section className='home'>
-            <div className='overlay'></div>
-            <div className='homeContent container'>
-                <div className='textDiv'>
-                <h1 className='homeTitle'>
-              REGISTER
-            </h1>
-          </div>
+        <section>
+            <div  className='home-Content'>
+                <h1 className='homeTitle'>REGISTER</h1>
+          
 
                     <Formik
                         initialValues={{
@@ -74,25 +70,60 @@ const Register = ()=>{
 
                         {({ errors, touched, values, handleChange, handleBlur, handleSubmit }) => (
                             <Form  onSubmit={handleSubmit}>
+
+                                
+                                
+                                <div className='input flex'>
                                 <Field name="name" placeholder="Your Name" value={values.name} onChange={handleChange} onBlur={handleBlur} />
-								{errors.name && touched.name ? (<div className="error">{errors.name}</div>) : null}
-
+                                {errors.name && touched.name ? (<div className="error">{errors.name}</div>) : null} <br/>
+                                </div>
+                              
+                               
+                                
+                                <div className='Input'>
+                                <div className='input flex'>
                                 <Field name="email" placeholder="Your Email" value={values.email} onChange={handleChange} onBlur={handleBlur} />
-                                {errors.email && touched.email ? (<div className="error">{errors.email}</div>) : null}
+                                {errors.email && touched.email ? (<div className="error">{errors.email}</div>) : null}<br/>
+                                </div>
+                                </div>
 
-                                <Field name="phoneNumber" placeholder="Your phoneNumber" value={values.phoneNumber} onChange={handleChange} onBlur={handleBlur} />
-                                {errors.phoneNumber && touched.phoneNumber ? (<div className="error">{errors.phoneNumber}</div>) : null}
-
-                                <Field name="Address" placeholder="Your Address" value={values.Address} onChange={handleChange} onBlur={handleBlur} />
-                                {errors.Address && touched.Address ? (<div className="error">{errors.Address}</div>) : null}
-                                
-                                {errors.userRole && touched.userRole ? (<div className="error">{errors.userRole}</div>) : null}
-
-                                
-                                
+                                <div className='Input'>
+                                <div className='input flex'>
                                 <Field name="password" placeholder="Your password" value={values.password} onChange={handleChange} onBlur={handleBlur} component={ShowhidePassword}/>
-                                {errors.password && touched.password ? (<div className="error">{errors.password}</div>) : null}
+                                {errors.password && touched.password ? (<div className="error">{errors.password}</div>) : null}<br/>
 
+                                </div>
+                                </div>
+
+                                <div className='Input'>
+                                <div className='input flex'>
+                                <Field name="Address" placeholder="Your Address" value={values.Address} onChange={handleChange} onBlur={handleBlur} />
+                                {errors.Address && touched.Address ? (<div className="error">{errors.Address}</div>) : null}<br/>
+                                </div>
+                                </div>
+
+                                <div className='Input'>
+                                <div className='input flex'>
+                                <Field name="phoneNumber" placeholder="Your phoneNumber" value={values.phoneNumber} onChange={handleChange} onBlur={handleBlur} />
+                                {errors.phoneNumber && touched.phoneNumber ? (<div className="error">{errors.phoneNumber}</div>) : null}<br/>
+
+                                </div>
+                                </div>
+                                {errors.userRole && touched.userRole ? (<div className="error">{errors.userRole}</div>) : null}<br/>
+                                <button className='button' type="submit">Signup</button>
+                                
+                                
+                            
+                                
+
+
+                                
+                                
+                                
+
+                                
+                                
+                               
                                 {/* <select
 									name="userRole"
 									value={values.userRole}
@@ -116,7 +147,6 @@ const Register = ()=>{
 								) : null} */}
 
                                 
-                                <button type="submit">Signup</button>
                             </Form>
                         )} 
                     </Formik>
